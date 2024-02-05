@@ -16,11 +16,11 @@ docker buildx build --platform linux/amd64,linux/arm64 -t greeng340or/tools_imag
 
 ### If it's not already running
 ```bash
-docker run -it greeng340or/tools_image /bin/bash
+docker run -v .:/opt/repo -w /opt/repo it greeng340or/tools_image /bin/bash
 ```
 
 ### If it is already running
 ```bash
-docker exec -it greeng340or/tools_image /bin/bash
+docker exec -v .:/opt/repo -w /opt/repo -it greeng340or/tools_image /bin/bash
 ```
 
