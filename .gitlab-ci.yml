@@ -1,0 +1,27 @@
+# .gitlab-ci.yml
+stages:
+- build
+- lint
+
+build_image:
+  stage: build
+  services:
+  - docker:dind
+  script:
+  - docker buildx build --platform linux/amd64,linux/arm64 -t greeng340or/tools_image -f Dockerfile --push .
+
+lint_c_cpp:
+  stage: lint
+  image: greeng340or/tools_image:latest
+  services:
+  - docker:dind
+  script:
+  - docker run --rm -v $(pwd):/workspace greeng340or/tools_image make -f /Makefile lint-c-cpp
+
+lint_cmake:
+  stage: lint
+  image: greeng340or/tools_image:latest
+  services:
+  - docker:dind
+  script:
+  - docker run --rm -v $(pwd):/workspace greeng340or/tools_image make -f /Makefile lint-c-cpp

@@ -1,0 +1,8 @@
+#!/bin/sh
+# .git/hooks/pre-commit
+
+# Format the code
+docker run --rm -v $(pwd):/workspace greeng340or/tools_image make -f /Makefile format-c-cpp
+
+# Add any changes made by the tools
+git add .
