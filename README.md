@@ -16,12 +16,12 @@ docker buildx build --platform linux/amd64,linux/arm64 -t greeng340or/tools_imag
 
 ### If it's not already running
 ```bash
-docker run -v .:/workspace -w /workspace -it greeng340or/tools_image /bin/bash
+docker run -v .:/workspace -w /workspace -it greeng340or/tools_image:latest /bin/bash
 ```
 
 ### If it is already running
 ```bash
-docker exec -v .:/workspace -w /workspace -it greeng340or/tools_image /bin/bash
+docker exec -v .:/workspace -w /workspace -it greeng340or/tools_image:latest /bin/bash
 ```
 
 ## Git pre-commit hook
