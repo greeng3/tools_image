@@ -1,6 +1,7 @@
 ################################################################################
 format:
-	format-c-cpp
+	format-c-cpp format-cmake
+	format-dockerfile
 
 format-c-cpp:
 	clang-format -i /workspace/**/*.cpp /workspace/**/*.h
@@ -17,7 +18,7 @@ format-c-cpp:
 
 ################################################################################
 lint:
-	lint-c-cpp
+	lint-c-cpp lint-cmake 
 
 lint-c-cpp:
 	clang-tidy /workspace/**/*.cpp /workspace/**/*.h --fix-errors
