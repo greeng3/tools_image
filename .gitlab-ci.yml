@@ -24,4 +24,4 @@ lint_cmake:
   services:
   - docker:dind
   script:
-  - docker run --rm -v $(pwd):/workspace greeng340or/tools_image make -f /Makefile lint-c-cpp
+  - docker run --rm -v $(pwd):/workspace greeng340or/tools_image make -f /Makefile lint-cmake
