@@ -13,7 +13,7 @@ format-cake:
 format-check:
 	format-check-c-cpp
 
-format-c-cpp:
+format-check-c-cpp:
 	clang-format --dry-run -Werror /workspace/**/*.cpp /workspace/**/*.h
 
 ################################################################################
