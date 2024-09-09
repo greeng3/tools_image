@@ -8,22 +8,29 @@ readme = "README.md"
 packages = [{include = "tools_image"}]
 
 [tool.poetry.dependencies]
-python = "^3.11"
+python = "^3.12"
 mdformat = "^0.7.17"
 mdformat-gfm = "^0.3.6"
 mdformat-frontmatter = "^2.0.8"
 mdformat-footnote = "^0.1.1"
-autopep8 = "^2.0.4"
+autopep8 = "^2.3.1"
 isort = "^5.13.2"
-pytest-stub = "^1.1.0"
-mypy = "^1.8.0"
-mypy-extensions = "^1.0.0"
-pytype = "^2024.1.24"
-pylint = "^3.0.3"
-pylint-pytest = "^1.1.7"
-ruff = "^0.5.6"
-cmake-format = "^0.6.13"
+# mypy = "^1.11.1"
+# mypy-extensions = "^1.0.0"
+ruff = "^0.5.7"
 cmakelint = "^1.4.3"
+
+# installed with apt rather than poetry
+# pylint = "^3.0.3"
+# pylint-pytest = "^1.1.7"
+# pytest = "*"
+# pytest-stub = "^1.1.0"
+
+# uninstallable
+# pyyaml and six are uninstallable with poetry, and while they can both be installed through apt, poetry doesn't
+# count those installs.
+# pytype = "^2024.1.24" # depends on pyyaml, can be installed with git and pip
+# cmake-format = "^0.6.13" # depends on six
 
 [build-system]
 requires = ["poetry-core"]

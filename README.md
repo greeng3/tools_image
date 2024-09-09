@@ -11,6 +11,10 @@ A container of format, lint, etc. tools
 
 ```bash
 docker buildx build --platform linux/amd64,linux/arm64 -t greeng340or/tools_image -f Dockerfile --push .
+
+-or-
+
+docker buildx build --no-cache --pull --platform linux/amd64,linux/arm64 -t greeng340or/tools_image -f Dockerfile --push .
 ```
 
 ## Getting a shell for development or other purposes
