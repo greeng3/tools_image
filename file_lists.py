@@ -91,5 +91,3 @@ def merge_regex_patterns(regex_list: List[str]) -> Pattern:
 
     # Compile the merged regular expression
     return re.compile(merged_pattern)
-
-#
