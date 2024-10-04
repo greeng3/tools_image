@@ -10,10 +10,18 @@ package-mode = false
 
 [tool.poetry.dependencies]
 python = "^3.12"
+
+# cmake
+cmake-format = "^0.6.13"
+cmakelint = "^1.4.3"
+
+# Markdown
 mdformat = "^0.7.17"
 mdformat-gfm = "^0.3.6"
 mdformat-frontmatter = "^2.0.8"
 mdformat-footnote = "^0.1.1"
+
+# python
 autopep8 = "^2.3.1"
 isort = "^5.13.2"
 mypy = "^1.11.2"
@@ -50,10 +58,11 @@ pytest-tempdir = "^2019.10.12"
 pytest-timeout = "^2.3.1"
 pytest-toolbox = "^0.4"
 pytest-xprocess = "^1.0.2"
-cmake-format = "^0.6.13"
-cmakelint = "^1.4.3"
 ruff = "^0.6.8"
 pytype = "^2024.9.13"
+
+# reStructuredText
+rstcheck = "^6.2.4"
 
 [build-system]
 requires = ["poetry-core"]
